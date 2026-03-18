@@ -7,5 +7,14 @@ parameters:
         - config/
         - database/
         - routes/
+
     level: 5
     tmpDir: storage/framework/cache/phpstan
+
+    excludePaths:
+        - _ide_helper.php
+        - _ide_helper_models.php
+        - .phpstorm.meta.php
+        - bootstrap/cache/*
+        - storage/*
+        - vendor/*
