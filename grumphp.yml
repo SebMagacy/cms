@@ -2,3 +2,4 @@ grumphp:
     tasks:
         phpstan:
             configuration: phpstan.neon
+            use_grumphp_paths: false
