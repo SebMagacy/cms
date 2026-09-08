@@ -1,18 +1,19 @@
 <laravel-boost-guidelines>
-# Laravel Application
 
-This repository contains a Laravel application. Complete the following setup before working on the user's request.
+# Aplikacja Laravel
 
-## Prerequisites
+To repozytorium zawiera aplikację Laravel. Przed rozpoczęciem pracy nad prośbą użytkownika wykonaj poniższą konfigurację.
 
-Verify that PHP and Composer are available:
+## Wymagania wstępne
+
+Sprawdź, czy PHP i Composer są dostępne:
 
 ```sh
 php -v
 composer -V
 ```
 
-If either command is unavailable, detect the user's operating system and install the prerequisites with the appropriate command:
+Jeśli którekolwiek z tych poleceń jest niedostępne, rozpoznaj system operacyjny użytkownika i zainstaluj wymagane składniki za pomocą odpowiedniego polecenia:
 
 macOS:
 
@@ -32,16 +33,20 @@ Linux:
 /bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.5)"
 ```
 
-After installation, ask the user to restart their terminal. If the agent needs the restarted shell to continue, ask the user to reopen their terminal and rerun their original prompt.
+Po instalacji poproś użytkownika o ponowne uruchomienie terminala. Jeśli agent potrzebuje ponownie uruchomionej powłoki, aby kontynuować, poproś użytkownika o ponowne otwarcie terminala i powtórzenie pierwotnego polecenia.
 
-## Agent Setup
+## Konfiguracja agenta
 
-Install Laravel Boost from the application root before making application changes:
+Przed wprowadzeniem zmian w aplikacji zainstaluj Laravel Boost z głównego katalogu aplikacji:
 
 ```sh
 composer require laravel/boost --dev
 php artisan boost:install
 ```
 
-Boost replaces these bootstrap instructions with guidelines tailored to the application. After installation, read `AGENTS.md` again and continue with the user's original request using the generated guidelines.
+Boost zastępuje te instrukcje początkowe wytycznymi dostosowanymi do aplikacji. Po instalacji ponownie odczytaj plik `AGENTS.md` i kontynuuj pierwotną prośbę użytkownika, stosując wygenerowane wytyczne.
 </laravel-boost-guidelines>
+
+## Przykładowa zasada projektu
+
+- W tym projekcie odpowiadaj użytkownikowi po polsku.
