@@ -1,0 +1,7 @@
+{
+  "userIgnoreFilters": [
+    "vendor/",
+    "storage/",
+    "bootstrap/cache/"
+  ]
+}
