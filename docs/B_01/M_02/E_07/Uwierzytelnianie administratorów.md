@@ -105,17 +105,4 @@ Na tym etapie model potrafi odczytać uprawnienie, ale sam dostęp do panelu nad
 
 ### 5. Plan tras logowania i ochrony panelu
 
-Przed dodaniem ochrony do panelu przygotuj adresy potrzebne administratorowi do zalogowania się i wylogowania. Trasy w pliku `routes/admin.php` otrzymują już prefiks adresu `/admin` i prefiks nazwy `admin.` z konfiguracji w `bootstrap/app.php`.
-
-| Metoda i adres | Nazwa trasy | Zadanie | Dostęp |
-| --- | --- | --- | --- |
-| `GET /admin/login` | `admin.login` | Wyświetlenie formularza logowania | Gość |
-| `POST /admin/login` | `admin.login.attempt` | Sprawdzenie danych i rozpoczęcie sesji | Gość |
-| `POST /admin/logout` | `admin.logout` | Zakończenie sesji | Zalogowany administrator |
-| `GET /admin` | `admin.dashboard` | Wyświetlenie panelu | Zalogowany administrator |
-
-Najpierw trzeba uruchomić stronę i obsługę logowania. Dopiero potem należy wymagać uwierzytelnienia przy wejściu na `/admin`; w przeciwnym razie niezalogowany użytkownik nie będzie miał dokąd zostać przekierowany.
-
-Poprawne hasło nie wystarcza do uzyskania dostępu do panelu. Po zalogowaniu aplikacja musi również sprawdzić `is_admin`. Użytkownik z `is_admin = false` nie może wejść na `/admin`, nawet jeśli ma aktywną sesję. Po udanym logowaniu należy odnowić identyfikator sesji, a podczas wylogowania unieważnić sesję. Wylogowanie powinno używać żądania `POST` chronionego tokenem CSRF.
-
-To jest plan kolejnych zmian; samo dopisanie tych adresów do dokumentacji nie tworzy jeszcze tras ani nie zabezpiecza panelu.
+Założenie jest takie, że dzielę witrynę na dwa widoki. Jeden dla odwiedzających pod adresem www.cms.local a drugi dla administratorów pod adresem www.cms.local/admin.
